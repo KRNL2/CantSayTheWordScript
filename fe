@@ -1,0 +1,274 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Cant Say the Word GUI", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+	Name = "Main"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+OrionLib:MakeNotification({
+	Name = "Join our discord!",
+	Content = "https://discord.gg/f26Vp8CzaZ",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+
+Tab:AddButton({
+	Name = "Anti Cant Say!",
+	Callback = function()
+      		game:GetService("Players").LocalPlayer.cantSay.Value = "555555555555555555555555555555555555555555u"
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+local Tab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+	Name = "Teleports/Badges"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddButton({
+	Name = "Finish Easy Obby",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13.4943476, -86.5290451, 77.6385956, -1, 1.78168662e-08, -8.78237279e-06, 1.78170527e-08, 1, -2.12067377e-08, 8.78237279e-06, -2.1206894e-08, -1)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "Finish Medium Obby",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-53.3725204, -86.5290451, 108.624664, -0.999961972, 8.6029651e-08, 0.0087191863, 8.54467146e-08, 1, -6.72292302e-08, -0.0087191863, -6.6481654e-08, -0.999961972)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "Finish Hard Obby",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-93.1392822, -84.6111679, 220.999039, -0.999847829, 3.67107553e-08, 0.0174433589, 3.57647956e-08, 1, -5.45423333e-08, -0.0174433589, -5.39101741e-08, -0.999847829)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+Tab:AddButton({
+	Name = "Teleport to end of spiral stairs",
+	Callback = function()
+      	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-121.38726, 183.528992, 5.08279037, 0.0784535259, 1.28655371e-08, -0.996917784, -3.20174074e-08, 1, 1.03856692e-08, 0.996917784, 3.11039301e-08, 0.0784535259)
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+local Tab = Window:MakeTab({
+	Name = "Items",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+	Name = "Get All Items"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddButton({
+	Name = "Get All Items!",
+	Callback = function()
+      		    for i,v in next, game:GetService("Players").LocalPlayer.PlayerGui.Main:GetDescendants() do
+if v.Name == 'RemoteEvent1' then
+v:FireServer()
+end
+end
+end
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+local Tab = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+	Name = "Misc"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddSlider({
+	Name = "Walkspeed",
+	Min = 0,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(s)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+	end    
+})
+
+--[[
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
+]]
+
+Tab:AddSlider({
+	Name = "Jump Power",
+	Min = 0,
+	Max = 500,
+	Default = 16,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Speed",
+	Callback = function(s)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+	end    
+})
+
+--[[
+Name = <string> - The name of the slider.
+Min = <number> - The minimal value of the slider.
+Max = <number> - The maxium value of the slider.
+Increment = <number> - How much the slider will change value when dragging.
+Default = <number> - The default value of the slider.
+ValueName = <string> - The text after the value number.
+Callback = <function> - The function of the slider.
+]]
+
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+	Name = "Credits"
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+
+Tab:AddParagraph("Owner","This GUI was made by Mr_BullFrog_")
+
+Tab:AddParagraph("My Youtube","https://www.youtube.com/channel/UC1lya2f3497sR75vnq7gYgw")
+
+Tab:AddParagraph("Discord Server","https://discord.gg/f26Vp8CzaZ")
+
+Tab:AddParagraph("Thanks Orion","Huge thanks to Orion for the UI Lib.")
+
+
+OrionLib:Init()
+
+
+Tab1:AddToggle({
+    Name = "Toggle",
+    Default = true,
+    Save = true,
+    Flag = "toggle"
+})
+
+print(OrionLib.Flags["toggle"].Value) -- prints the value of the toggle.
+
