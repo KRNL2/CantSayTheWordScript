@@ -190,7 +190,7 @@ Tab:AddSlider({
 	Min = 0,
 	Max = 500,
 	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
+	Color = Color3.fromRGB(128,0,128),
 	Increment = 1,
 	ValueName = "Speed",
 	Callback = function(s)
@@ -213,9 +213,9 @@ Tab:AddSlider({
 	Min = 0,
 	Max = 500,
 	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
+	Color = Color3.fromRGB(128,0,128),
 	Increment = 1,
-	ValueName = "Speed",
+	ValueName = "Jump Power",
 	Callback = function(t)
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = t
 	end    
@@ -271,4 +271,3 @@ Tab1:AddToggle({
 })
 
 print(OrionLib.Flags["toggle"].Value) -- prints the value of the toggle.
-
